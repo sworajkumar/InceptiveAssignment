@@ -1,0 +1,233 @@
+<ScrollView
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:background="@color/lightWhite"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_bg"
+            android:weightSum="2"
+            android:padding="@dimen/margin_x2">
+
+            <ImageView
+                android:id="@+id/closeDialog"
+                style="@style/backfrag_button_submit"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:padding="0dp"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                style="@style/LayoutHeadings"
+                android:text="Patient Deatils"
+                android:textStyle="bold"
+                android:textSize="@dimen/margin_adv"
+                android:layout_weight="1.8"
+                android:id="@+id/textView5" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"
+            android:text="Patient Name"
+            android:textColor="@color/colorPurple"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/patientname"
+            android:layout_width="match_parent"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_2x"
+            android:layout_marginRight="@dimen/margin_2x"
+            android:inputType="text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"
+            android:text="Enter UHID"
+            android:textColor="@color/colorPurple"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/uhidnumber"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_2x"
+            android:layout_marginRight="@dimen/margin_2x"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"
+            android:text="Date Of Birth"
+            android:textColor="@color/colorPurple"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/dateofbirth"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinnerHeight"
+                android:layout_marginRight="@dimen/margin_x"
+                android:drawableRight="@drawable/calendarr"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="@dimen/margin_adv"
+                android:typeface="sans" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:text="/"
+                android:paddingLeft="@dimen/padding_x2"
+                android:textColor="#FFF6F2F2"
+                android:textSize="@dimen/font_size"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="0dp"
+                android:paddingLeft="@dimen/font_size"
+                android:hint="Age"
+                android:maxLength="2"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:layout_marginRight="@dimen/margin_x"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textSize="@dimen/margin_adv" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x"
+            android:layout_marginTop="@dimen/margin_adv"
+            android:layout_marginRight="@dimen/margin_x"
+            android:background="@drawable/border_color"
+            android:weightSum="2">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_x2"
+                android:text="Gender"
+                android:textColor="@color/colorPurple"
+                android:textSize="@dimen/margin_adv"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1">
+
+                <Spinner
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinnerHeight"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_x2"
+                    android:singleLine="true"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Mobile Number"
+            android:layout_margin="10dp"
+            android:textColor="@color/colorPurple"
+            android:textSize="@dimen/margin_adv"
+            android:textStyle="bold" />
+
+        <EditText
+            android:textColor="#000000"
+            android:id="@+id/mobilenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinnerHeight"
+            android:layout_marginRight="@dimen/margin_x"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textSize="@dimen/margin_adv" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Address"
+            android:textColor="@color/colorPurple"
+            android:textSize="@dimen/margin_adv"
+            android:textStyle="bold" />
+
+        <EditText
+            android:textColor="#000000"
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinnerHeight"
+            android:layout_marginRight="@dimen/margin_x"
+            android:importantForAutofill="no"
+            android:maxLength="10"
+            android:textSize="@dimen/margin_adv" />
+        <Button
+            android:id="@+id/submit_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="@dimen/font_size"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/bg_ui"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
+
+
+
+    </LinearLayout>
+</ScrollView>
